@@ -155,6 +155,11 @@
               {{#projects}}
               <li class="list-group-item">
                 <span style="font-weight:bold">{{name}}</span>: {{description}}
+                {{#url}}
+                <div class="address">
+                  <a href="{{url}}" target= "_blank"><i class="fas fa-globe ico"></i> {{url}}</a>
+                </div>
+                {{/url}}
               </li>
               {{/projects}}
             </ul>
