@@ -6,32 +6,34 @@ var Mustache = require('mustache');
 var d = new Date();
 var curyear = d.getFullYear();
 
+const present = "Heute";
+
 function getMonth(startDateStr) {
     switch (startDateStr.substr(5,2)) {
     case '01':
-        return "January ";
+        return "Januar ";
     case '02':
-        return "February ";
+        return "Februar ";
     case '03':
-        return "March ";
+        return "März ";
     case '04':
         return "April ";
     case '05':
-        return "May ";
+        return "Mai ";
     case '06':
-        return "June ";
+        return "Juni ";
     case '07':
-        return "July ";
+        return "Juli ";
     case '08':
         return "August ";
     case '09':
         return "September ";
     case '10':
-        return "October ";
+        return "Oktober ";
     case '11':
         return "November ";
     case '12':
-        return "December ";
+        return "Dezember ";
     }
 }
 
@@ -115,7 +117,7 @@ function render(resumeObject) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
                 w.endDateMonth = getMonth(w.endDate || "");
             } else {
-                w.endDateYear = 'Present'
+                w.endDateYear = present;
             }
             if (w.highlights) {
                 if (w.highlights[0]) {
@@ -139,7 +141,7 @@ function render(resumeObject) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
                 w.endDateMonth = getMonth(w.endDate || "");
             } else {
-                w.endDateYear = 'Present'
+                w.endDateYear = 'Present';
             }
             if (w.highlights) {
                 if (w.highlights[0]) {
@@ -180,7 +182,7 @@ function render(resumeObject) {
                         e.endDateYear += " (expected)";
                     }
                 } else {
-                    e.endDateYear = 'Present'
+                    e.endDateYear = 'Present';
                     e.endDateMonth = '';
                 }
                 if (e.courses) {
