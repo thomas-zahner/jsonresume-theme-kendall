@@ -286,7 +286,6 @@
             {{/publications}}
           </div>
           {{/publicationsBool}}
-          {{#languagesBool}}
           <!-- LANGUAGES -->
           <div class="box">
             <h2><i class="fas fa-language ico"></i> Languages</h2>
@@ -296,7 +295,6 @@
               {{/languages}}
             </ul>
           </div>
-          {{/languagesBool}}
           {{#interestsBool}}
           <!-- HOBBIES -->
           <div class="box">
